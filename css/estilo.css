@@ -1,0 +1,158 @@
+/* ===== ESTILOS GERAIS ===== */
+:root {
+    --preto: #000000;
+    --branco: #FFFFFF;
+    --detalhe: #D4AF37;
+    --cinza: #F5F5F5;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+body {
+    background-color: var(--branco);
+    color: var(--preto);
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1; 
+}
+
+/* ===== HEADER (FLEXBOX) ===== */
+.cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    background: var(--preto);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo img {
+    height: 30px;
+}
+
+.menu {
+    display: flex;
+    gap: 30px;
+}
+
+.menu a {
+    color: var(--branco);
+    text-decoration: none;
+    font-size: 14px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding-bottom: 5px;
+}
+
+.menu a.ativo {
+    border-bottom: 1px solid var(--branco);
+}
+
+/* ===== HERO SECTION ===== */
+.hero {
+    height: 70vh;
+    background: url('../img/hero.png') center/cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 10%;
+    color: var(--branco);
+    margin-bottom: 50px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+/* ===== GRID (PARA GALERIA/PRODUTOS) ===== */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
+    padding: 0 5%;
+    margin: 50px 0;
+}
+
+.item {
+    background: var(--cinza);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.item:hover {
+    transform: translateY(-5px);
+}
+
+.item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+/* ===== FORMULÁRIO ===== */
+.formulario {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+.formulario input, 
+.formulario textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+}
+
+.formulario button {
+    background: var(--preto);
+    color: var(--branco);
+    border: none;
+    padding: 12px 30px;
+    cursor: pointer;
+}
+
+/* ===== RODAPÉ ===== */
+.rodape {
+      text-align: center;
+    padding: 30px;
+    background: var(--preto);
+    color: var(--branco);
+    margin-top: auto; 
+}
+
+/* ===== MEDIA QUERIES ===== */
+@media (max-width: 768px) {
+    .cabecalho {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .menu {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+}
