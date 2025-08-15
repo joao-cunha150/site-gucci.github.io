@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gucci - Finalizar Compra</title>
+    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="css/compra.css">
+</head>
+<body>
+    
+    <header class="cabecalho">
+        <div class="logo">
+            <img src="img/logo.png" alt="Gucci">
+        </div>
+        <nav class="menu">
+            <a href="index.html">Home</a>
+            <a href="galeria.html">Galeria</a>
+            <a href="produtos.html">Produtos</a>
+            <a href="compra.html" class="ativo">Comprar</a>
+            <a href="contato.html">Contato</a>
+        </nav>
+    </header>
+
+    
+    <main class="conteudo-compra">
+        <h1>Finalizar Compra</h1>
+        
+        
+        <div class="passos-compra">
+            <div class="passo ativo">
+                <div class="numero">1</div>
+                <div>Endereço</div>
+            </div>
+            <div class="passo">
+                <div class="numero">2</div>
+                <div>Pagamento</div>
+            </div>
+            <div class="passo">
+                <div class="numero">3</div>
+                <div>Confirmação</div>
+            </div>
+        </div>
+        
+        
+        <form class="formulario-compra">
+            <h2>Informações de Entrega</h2>
+            
+            <div class="form-grid">
+                <div class="form-group">
+                    <label>Nome</label>
+                    <input type="text" required>
+                </div>
+                <div class="form-group">
+                    <label>Sobrenome</label>
+                    <input type="text" required>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label>Endereço</label>
+                <input type="text" required>
+            </div>
+            
+            <div class="form-grid-3">
+                <div class="form-group">
+                    <label>Cidade</label>
+                    <input type="text" required>
+                </div>
+                <div class="form-group">
+                    <label>Estado</label>
+                    <select required>
+                        <option value="">Selecione</option>
+                        <option>SP</option>
+                        <option>RJ</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>CEP</label>
+                    <input type="text" required>
+                </div>
+            </div>
+            
+            <div class="resumo-compra">
+                <h3>Seu Pedido</h3>
+                <div class="produto-resumo">
+                    <div>Bolsa GG Marmont</div>
+                    <div>R$ 9.850,00</div>
+                </div>
+                <div class="produto-resumo">
+                    <div>Frete</div>
+                    <div>Grátis</div>
+                </div>
+                <div class="produto-resumo total">
+                    <div>Total</div>
+                    <div>R$ 9.850,00</div>
+                </div>
+            </div>
+            
+            <button type="submit" class="btn-continuar">Continuar para Pagamento</button>
+        </form>
+    </main>
+
+    
+    <footer class="rodape">
+        <p>© 2024 Gucci. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
